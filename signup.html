@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sign Up | SoulTravel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <h1>Create an Account</h1>
+    <form class="auth-form">
+      <label>Full Name</label>
+      <input type="text" placeholder="Enter your name" required />
+      <label>Email</label>
+      <input type="email" placeholder="Enter your email" required />
+      <label>Password</label>
+      <input type="password" placeholder="Create a password" required />
+      <button type="submit">Sign Up</button>
+      <p>Already have an account? <a href="signin.html">Sign In</a></p>
+    </form>
+  </div>
+</body>
+</html>
+
+<style>
+.page h1 {
+  text-align: center;
+  color: #1e3a8a;
+  margin-bottom: 20px;
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-form label {
+  font-weight: 600;
+  color: #1e3a8a;
+}
+
+.auth-form input {
+  padding: 10px;
+  border: 2px solid #bfdbfe;
+  border-radius: 10px;
+}
+
+.auth-form button {
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.auth-form button:hover {
+  background: #1d4ed8;
+}
+</style>
