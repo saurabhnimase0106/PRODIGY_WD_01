@@ -1,0 +1,163 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact | SoulTravel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you! Reach out with any questions or feedback.</p>
+
+    <div class="contact-info">
+      <p><strong>Email:</strong> support@soultravel.com</p>
+      <p><strong>Phone:</strong> +91-9988868355</p>
+      <p><strong>Address:</strong>  Travel Lane, Wagle Istate Thane - 421603, India</p>
+    </div>
+
+    <form id="contactForm" class="contact-form" action="#" method="POST" novalidate>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your email address" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p id="confirmation" style="display:none; margin-top:20px; color:green; font-weight:bold; text-align:center;">
+      Thank you for contacting us! We'll get back to you soon.
+    </p>
+  </div>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const confirmation = document.getElementById('confirmation');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Simple validation
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const message = form.message.value.trim();
+
+      if (!name) {
+        alert('Please enter your name.');
+        form.name.focus();
+        return;
+      }
+      if (!email || !validateEmail(email)) {
+        alert('Please enter a valid email address.');
+        form.email.focus();
+        return;
+      }
+      if (!message) {
+        alert('Please enter your message.');
+        form.message.focus();
+        return;
+      }
+
+      // If validation passes
+      form.style.display = 'none';
+      confirmation.style.display = 'block';
+
+      // Here you can add AJAX request to send form data to server if needed
+    });
+
+    function validateEmail(email) {
+      // Simple regex for email validation
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email.toLowerCase());
+    }
+  </script>
+</body>
+</html>
+
+
+<style>/* style.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #dbeafe, #eff6ff);
+  color: #1e293b;
+  min-height: 100vh;
+}
+
+.page {
+  max-width: 600px;
+  margin: 50px auto;
+  background: #ffffff;
+  padding: 40px 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.15);
+}
+
+h1 {
+  font-size: 2.8rem;
+  color: #2563eb;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #475569;
+  margin-bottom: 30px;
+}
+
+.contact-info p {
+  font-weight: 600;
+  margin: 8px 0;
+  color: #1e40af;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1e40af;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 2px solid #bfdbfe;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #2563eb;
+  outline: none;
+  background: #e0e7ff;
+}
+
+button[type="submit"] {
+  background-color: #2563eb;
+  color: white;
+  padding: 14px 0;
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #1d4ed8;
+}
+</style>
