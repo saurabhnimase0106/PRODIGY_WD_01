@@ -1,0 +1,92 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Packages | SoulTravel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <h1>Travel Packages</h1>
+    <div class="cards">
+      <div class="card">Family Package</div>
+      <div class="card">Adventure Package</div>
+      <div class="card">Honeymoon Package</div>
+      <div class="card">Luxury Escape</div>
+      <div class="card">Beach Holiday</div>
+      <div class="card">Hill Station Retreat</div>
+      <div class="card">Wildlife Safari</div>
+      <div class="card">Cultural Heritage Tour</div>
+      <div class="card">Weekend Getaway</div>
+      <div class="card">Spiritual Journey</div>
+      <div class="card">International Explorer</div>
+      <div class="card">Budget Backpacker</div>
+      <div class="card">Cruise Vacation</div>
+      <div class="card">Solo Traveler Plan</div>
+      <div class="card">Senior Citizen Special</div>
+      <div class="card">Student Tour Package</div>
+    </div>
+  </div>
+</body>
+</html>
+
+<style>/* style.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #e0f2fe, #f0fdfa);
+  color: #333;
+}
+
+.page {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  color: #14b8a6;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 25px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-top: 5px solid #06b6d4;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+  border-top-color: #0ea5e9;
+  background: #f0f9ff;
+}
+
+.card::after {
+  content: "🌍";
+  font-size: 1.8rem;
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  opacity: 0.15;
+}
+</style>
