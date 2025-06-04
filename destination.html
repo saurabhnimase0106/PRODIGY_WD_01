@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Destination | SoulTravel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <h1>Popular Destinations</h1>
+    <div class="cards">
+      <div class="card">New York City, USA – Times Square, Central Park, Statue of Liberty</div>
+      <div class="card">Paris, France – Eiffel Tower, Louvre Museum, Seine River cruises</div>
+      <div class="card">Rome, Italy – Colosseum, Vatican City, Italian cuisine</div>
+      <div class="card">Barcelona, Spain – Sagrada Família, Gothic Quarter, beaches</div>
+      <div class="card">Tokyo, Japan – Shibuya Crossing, cherry blossoms, temples</div>
+      <div class="card">Bangkok, Thailand – Grand Palace, street food, floating markets</div>
+      <div class="card">Dubai, UAE – Burj Khalifa, desert safari, luxury shopping</div>
+      <div class="card">Bali, Indonesia – Beaches, rice terraces, Uluwatu Temple</div>
+      <div class="card">Istanbul, Turkey – Hagia Sophia, Blue Mosque, Bosphorus cruise</div>
+      <div class="card">Sydney, Australia – Opera House, Bondi Beach, Harbor Bridge</div>
+      <div class="card">Cape Town, South Africa – Table Mountain, vineyards, beaches</div>
+      <div class="card">Singapore – Marina Bay Sands, Gardens by the Bay, Sentosa</div>
+      <div class="card">Amsterdam, Netherlands – Canals, museums, tulip gardens</div>
+      <div class="card">Rio de Janeiro, Brazil – Christ the Redeemer, Copacabana</div>
+      <div class="card">Toronto, Canada – CN Tower, museums, multicultural neighborhoods</div>
+      <div class="card">Los Angeles, USA – Hollywood, Santa Monica, Universal Studios</div>
+      <div class="card">San Francisco, USA – Golden Gate Bridge, Alcatraz, cable cars</div>
+      <div class="card">Venice, Italy – Canals, gondola rides, historic architecture</div>
+      <div class="card">Santorini, Greece – White-washed houses, sunsets, beaches</div>
+      <div class="card">London, UK – Big Ben, Buckingham Palace, British Museum</div>
+      <div class="card">Prague, Czech Republic – Charles Bridge, Old Town, castles</div>
+      <div class="card">Machu Picchu, Peru – Inca ruins, Andes mountains, hiking</div>
+      <div class="card">Vienna, Austria – Palaces, classical music, museums</div>
+      <div class="card">Seoul, South Korea – K-pop culture, temples, tech shopping</div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+<style>/* style.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #f2f2f2, #dbeafe);
+  color: #333;
+}
+
+.page {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  color: #1d4ed8;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  border-left: 5px solid #3b82f6;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border-left-color: #2563eb;
+}
+
+.card::before {
+  content: "📍";
+  font-size: 1.5rem;
+  position: absolute;
+  top: 15px;
+  left: 2px;
+}
+</style>
